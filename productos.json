@@ -1,0 +1,202 @@
+[
+  {
+    "codigo": 1,
+    "nombreProducto": "Smartphone Galaxy S20",
+    "descripcion": "Potente smartphone con cámara de alta resolución y pantalla AMOLED.",
+    "precioUnitario": 799.99,
+    "categoria": "Smartphone",
+    "stock": 45,
+    "disponibilidad": true,
+    "img": "/img/s20.webp"
+  },
+  {
+    "codigo": 2,
+    "nombreProducto": "Smart TV 55descripcion' 4K HDR",
+    "descripcion": "Televisor inteligente con resolución 4K y soporte para HDR.",
+    "precioUnitario": 999.99,
+    "categoria": "Smart TV",
+    "stock": 30,
+    "disponibilidad": true,
+    "img": "/img/smart55.webp"
+  },
+  {
+    "codigo": 3,
+    "nombreProducto": "Notebook HP Pavilion",
+    "descripcion": "Portátil potente con procesador Intel Core i7 y tarjeta gráfica dedicada.",
+    "precioUnitario": 1199.99,
+    "categoria": "Notebook",
+    "stock": 25,
+    "disponibilidad": true,
+    "img": "/img/notebookhp.webp"
+  },
+  {
+    "codigo": 4,
+    "nombreProducto": "Tablet iPad Air",
+    "descripcion": "Tableta ligera con pantalla Retina y compatibilidad con Apple Pencil.",
+    "precioUnitario": 599.99,
+    "categoria": "Tablet",
+    "stock": 50,
+    "disponibilidad": true,
+    "img": "/img/ipad-air.webp"
+  },
+  {
+    "codigo": 5,
+    "nombreProducto": "Monitor Gamer Acer Predator",
+    "descripcion": "Monitor curvo de alta tasa de refresco y tiempo de respuesta para jugadores.",
+    "precioUnitario": 499.99,
+    "categoria": "Monitores Gamer",
+    "stock": 35,
+    "disponibilidad": true,
+    "img": "/img/monitor-acer.webp"
+  },
+  {
+    "codigo": 6,
+    "nombreProducto": "Teclado mecánico Razer",
+    "descripcion": "Teclado para juegos con interruptores mecánicos y retroiluminación RGB.",
+    "precioUnitario": 129.99,
+    "categoria": "Accesorios de computación",
+    "stock": 60,
+    "disponibilidad": true,
+    "img": "/img/teclado-razer.webp"
+  },
+  {
+    "codigo": 7,
+    "nombreProducto": "Smartphone iPhone 13",
+    "descripcion": "El último smartphone de Apple con potente chip y cámara avanzada.",
+    "precioUnitario": 899.99,
+    "categoria": "Smartphone",
+    "stock": 40,
+    "disponibilidad": true,
+    "img": "/img/iphone13.webp"
+  },
+  {
+    "codigo": 8,
+    "nombreProducto": "Smart TV 65descripcion' OLED",
+    "descripcion": "Televisor OLED con colores vivos y negros profundos.",
+    "precioUnitario": 1499.99,
+    "categoria": "Smart TV",
+    "stock": 28,
+    "disponibilidad": true,
+    "img": "/img/smart65.webp"
+  },
+  {
+    "codigo": 9,
+    "nombreProducto": "Laptop Dell XPS 15",
+    "descripcion": "Portátil premium con pantalla táctil 4K y diseño elegante.",
+    "precioUnitario": 1399.99,
+    "categoria": "Notebook",
+    "stock": 20,
+    "disponibilidad": true,
+    "img": "/img/dell15.webp"
+  },
+  {
+    "codigo": 10,
+    "nombreProducto": "Tablet Samsung Galaxy Tab S7",
+    "descripcion": "Tableta Android con S Pen y pantalla Super AMOLED.",
+    "precioUnitario": 649.99,
+    "categoria": "Tablet",
+    "stock": 55,
+    "disponibilidad": true,
+    "img": "/img/tablet.webp"
+  },
+  {
+    "codigo": 11,
+    "nombreProducto": "Monitor LG UltraGear",
+    "descripcion": "Monitor gaming ultrapanorámico con alta frecuencia de actualización.",
+    "precioUnitario": 699.99,
+    "categoria": "Monitores Gamer",
+    "stock": 32,
+    "disponibilidad": true,
+    "img": "/img/monitor-lg.webp"
+  },
+  {
+    "codigo": 12,
+    "nombreProducto": "Mouse Logitech G Pro",
+    "descripcion": "Ratón para juegos con sensor de alta precisión y diseño ambidiestro.",
+    "precioUnitario": 79.99,
+    "categoria": "Accesorios de computación",
+    "stock": 50,
+    "disponibilidad": true,
+    "img": "/img/logitech-g-pro.webp"
+  },
+  {
+    "codigo": 13,
+    "nombreProducto": "Smartphone Google Pixel 6",
+    "descripcion": "Teléfono con cámara de inteligencia artificial y experiencia Android pura.",
+    "precioUnitario": 749.99,
+    "categoria": "Smartphone",
+    "stock": 37,
+    "disponibilidad": true,
+    "img": "/img/pixel6.webp"
+  },
+  {
+    "codigo": 14,
+    "nombreProducto": "Smart TV Sony Bravia 75",
+    "descripcion": "Televisor 8K con tecnología de mejora de imagen y sonido envolvente.",
+    "precioUnitario": 2499.99,
+    "categoria": "Smart TV",
+    "stock": 22,
+    "disponibilidad": true,
+    "img": "/img/smartsony.webp"
+  },
+  {
+    "codigo": 15,
+    "nombreProducto": "Laptop Lenovo ThinkPad X1 Carbon",
+    "descripcion": "Portátil ultraligero con durabilidad empresarial y alta resolución.",
+    "precioUnitario": 1699.99,
+    "categoria": "Notebook",
+    "stock": 27,
+    "disponibilidad": true,
+    "img": "/img/laptop-lenovo.webp"
+  },
+  {
+    "codigo": 16,
+    "nombreProducto": "Tablet Microsoft Surface Pro 8",
+    "descripcion": "Tableta 2 en 1 con potencia de laptop y soporte para Surface Pen.",
+    "precioUnitario": 899.99,
+    "categoria": "Tablet",
+    "stock": 48,
+    "disponibilidad": true,
+    "img": "/img/surfacepro.webp"
+  },
+  {
+    "codigo": 17,
+    "nombreProducto": "Monitor ASUS ROG Swift",
+    "descripcion": "Monitor gaming con tecnología G-Sync y alta tasa de refresco.",
+    "precioUnitario": 799.99,
+    "categoria": "Monitores Gamer",
+    "stock": 29,
+    "disponibilidad": true,
+    "img": "/img/asusrog.webp"
+  },
+  {
+    "codigo": 18,
+    "nombreProducto": "Audífonos inalámbricos Bose QC35 II",
+    "descripcion": "Audífonos con cancelación de ruido y calidad de audio excepcional.",
+    "precioUnitario": 299.99,
+    "categoria": "Accesorios de computación",
+    "stock": 38,
+    "disponibilidad": true,
+    "img": "/img/bose.webp"
+  },
+  {
+    "codigo": 19,
+    "nombreProducto": "Smartphone OnePlus 9 Pro",
+    "descripcion": "Teléfono con pantalla fluida y carga ultrarrápida.",
+    "precioUnitario": 899.99,
+    "categoria": "Smartphone",
+    "stock": 33,
+    "disponibilidad": true,
+    "img": "/img/oneplus.webp"
+  },
+  {
+    "codigo": 20,
+    "nombreProducto": "Smart TV LG 55descripcion' OLED",
+    "descripcion": "Televisor OLED con IA de procesamiento y diseño delgado.",
+    "precioUnitario": 1299.99,
+    "categoria": "Smart TV",
+    "stock": 24,
+    "disponibilidad": true,
+    "img": "/img/smart55lg.webp"
+  }
+]

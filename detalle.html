@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETALLE</title>
+    
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Detalle del Producto</title>
+        <link rel="stylesheet" href="style.css">    
+    </head>
+    <body>
+        <h1>Detalle del Producto</h1>
+        <div id="product-details"></div>
+ 
+        <script>
+            // Obtiene el código del producto de la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const codigoProducto = urlParams.get('codigo');
+    
+            // Busca el producto en el archivo JSON
+            fetch('productos.json')
+                .then(response => response.json())
+                .then(data => {
+                    const product = data.find(product => product.codigo == codigoProducto);
+    
+                    if (product) {
+                        const productDetails = document.getElementById('product-details');
+                        productDetails.innerHTML = `
+                    <h2>${product.nombreProducto}</h2>
+                    <p>Código: ${product.codigo}</p>
+                    <p>Descripción: ${product.descripcion}</p>
+                    <p>Precio: $${product.precioUnitario}</p>
+                    <p>Categoría: ${product.categoria}</p>
+                    <p>Stock: ${product.stock}</p>
+                    <p>Disponibilidad: ${product.disponibilidad ? 'Disponible' : 'Agotado'}</p>
+                    <img src="${product.img}" alt="${product.nombreProducto}">
+                    <div class="div">
+                        <a class="tiendaClass" href="index.html">Volver a la Tienda</a>
+                    
+                    </div>
+                `;
+                    } else {
+                        
+                        console.error('Producto no encontrado');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error al cargar el archivo JSON:', error);
+                });
+        </script>
+    </body>
+    </html>
+    
+</body>
+</html>
