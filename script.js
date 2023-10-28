@@ -43,16 +43,6 @@ cargarProductos()
     
 
     
-// Función para calcular y mostrar el total del carrito
-function actualizarSumaCarrito() {
-    // Calcular la suma de los precios en el carrito
-    const suma = carrito.reduce((total, producto) => total + parseFloat(producto.precioUnitario), 0);
-
-    // Mostrar la suma en el carrito
-    const sumaCarritoElement = document.getElementById('suma-carrito');
-    sumaCarritoElement.textContent = `Total: $${suma.toFixed(2)}`;
-}
-
 
 
 function agregarAlCarrito(event) {
@@ -74,7 +64,7 @@ function agregarAlCarrito(event) {
 
                 // Crear un elemento de lista para el producto en el carrito
                 const listItem = document.createElement('li');
-                listItem.textContent = `${product.nombreProducto} - Precio: $${product.precioUnitario}`;
+                
                 listItem.innerHTML = `
                 <h2>${product.nombreProducto}</h2>
                 <p>- Precio: $${product.precioUnitario}</p>
@@ -106,6 +96,15 @@ function agregarAlCarrito(event) {
             console.error('Error al cargar el archivo JSON:', error);
         });
 }
+// Función para calcular y mostrar el total del carrito
+function actualizarSumaCarrito() {
+    // Calcular la suma de los precios en el carrito
+    const suma = carrito.reduce((total, producto) => total + parseFloat(producto.precioUnitario), 0);
+
+    // Mostrar la suma en el carrito
+    const sumaCarritoElement = document.getElementById('suma-carrito');
+    sumaCarritoElement.textContent = `Total: $${suma.toFixed(2)}`;
+}
 
 
 function eliminarDelCarrito(productCode) {
@@ -122,51 +121,6 @@ function eliminarDelCarrito(productCode) {
         console.error('Producto no encontrado en el carrito');
     }
 }
-
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
-    const carritoList = document.getElementById('carrito-list');
-
-    function actualizarCarritoDesdeLocalStorage() {
-        // Recuperar el carrito desde localStorage
-        const carritoLocalStorage = JSON.parse(localStorage.getItem('carrito'));
-
-        if (carritoLocalStorage && carritoLocalStorage.length > 0) {
-            carritoList.innerHTML = ''; // Limpiar la lista del carrito
-
-            carrito = carritoLocalStorage; // Actualizar la variable global
-
-            carrito.forEach(product => {
-                // Crear un elemento de lista para el producto en el carrito
-                const listItem = document.createElement('li');
-                listItem.textContent = `${product.nombreProducto} - Precio: $${product.precioUnitario}`;
-
-                // Crear un botón para eliminar el producto del carrito
-                const deleteButton = document.createElement('button');
-                deleteButton.textContent = 'Eliminar';
-                deleteButton.addEventListener('click', () => {
-                    eliminarDelCarrito(product.codigo);
-                    // Eliminar el elemento del DOM
-                    carritoList.removeChild(listItem);
-                });
-
-                // Agregar el botón de eliminar al elemento de lista
-                listItem.appendChild(deleteButton);
-
-                carritoList.appendChild(listItem);
-            });
-        }
-    }
-
-    // Llama a la función para actualizar el carrito desde localStorage cuando se carga la página
-    actualizarCarritoDesdeLocalStorage();
-});
-// script.js
-
-// Variable global para llevar un seguimiento del carrito
-
 
 document.addEventListener('DOMContentLoaded', function () {
     const carritoList = document.getElementById('carrito-list');
@@ -203,6 +157,30 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     }
+// Obtén referencias a los elementos de la barra de búsqueda
+const searchInput = document.getElementById("search-input");
+
+// Evento al campo de entrada para permitir la búsqueda en tiempo real
+searchInput.addEventListener("input", function () {
+  filtrarProductos();
+});
+
+
+function filtrarProductos() {
+    const query = searchInput.value.toLowerCase().trim(); // Obtiene la consulta de búsqueda en minúsculas sin espacios en blanco al principio y al final
+    const productList = document.getElementById("product-list");
+    const productos = productList.querySelectorAll("li"); // Obtiene todos los elementos de la lista de productos
+  
+    productos.forEach((product) => {
+      const nombreProducto = product.querySelector("h2").textContent.toLowerCase(); 
+      if (nombreProducto.includes(query)) {
+        product.style.display = "block";
+      } else {
+        product.style.display = "none";
+      }
+    });
+  }
+  
 
     // Llama a la función para actualizar el carrito desde localStorage cuando se carga la página
     actualizarCarritoDesdeLocalStorage();

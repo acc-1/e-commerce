@@ -12,7 +12,10 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
-
+#product-list li {
+    display: block;
+  }
+  
 /* Encabezado */
 header {
     background-color: #222;
